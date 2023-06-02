@@ -2,8 +2,28 @@ from test_framework import generic_test
 
 
 def look_and_say(n: int) -> str:
-    # TODO - you fill in here.
-    return ''
+    prev, curr = None, '1'
+    for i in range(n):
+        prev = curr
+        curr = say(prev)
+
+    return prev
+
+
+def say(s: str):
+    ans = ''
+    count = 1
+    char = s[0]
+    for i in range(1, len(s)):
+        if s[i] == s[i - 1]:
+            count += 1
+        else:
+            ans += f'{count}{char}'
+            count = 1
+            char = s[i]
+
+    return ans + f'{count}{char}'
+
 
 
 if __name__ == '__main__':
