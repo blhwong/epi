@@ -1,23 +1,27 @@
+from heapq import *
 from test_framework import generic_test
 from test_framework.test_failure import TestFailure
 
 
 class Stack:
+
+    def __init__(self):
+        self.storage = []
+
     def empty(self) -> bool:
-        # TODO - you fill in here.
-        return True
+        return len(self.storage) == 0
 
     def max(self) -> int:
-        # TODO - you fill in here.
-        return 0
+        return self.storage[-1][1]
 
     def pop(self) -> int:
-        # TODO - you fill in here.
-        return 0
+        return self.storage.pop()[0]
 
     def push(self, x: int) -> None:
-        # TODO - you fill in here.
-        return
+        max_value = x
+        if not self.empty():
+            max_value = max(x, self.max())
+        self.storage.append((x, max_value))
 
 
 def stack_tester(ops):
