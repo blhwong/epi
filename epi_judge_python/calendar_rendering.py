@@ -9,9 +9,23 @@ from test_framework.test_utils import enable_executor_hook
 Event = collections.namedtuple('Event', ('start', 'finish'))
 
 
-def find_max_simultaneous_events(A: List[Event]) -> int:
-    # TODO - you fill in here.
-    return 0
+def find_max_simultaneous_events(a: List[Event]) -> int:
+    arr = []
+    for event in a:
+        arr.append((event.start, True))
+        arr.append((event.finish, False))
+    arr.sort(key=lambda el: (el[0], not el[1]))
+
+    ans, curr = 0, 0
+
+    for _, is_start in arr:
+        if is_start:
+            curr += 1
+            ans = max(ans, curr)
+        else:
+            curr -= 1
+
+    return ans
 
 
 @enable_executor_hook

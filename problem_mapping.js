@@ -1620,7 +1620,7 @@ problem_mapping = {
                 "total": 202
             },
             "Python: intersect_sorted_arrays.py": {
-                "passed": 0,
+                "passed": 202,
                 "total": 202
             }
         },
@@ -1634,7 +1634,7 @@ problem_mapping = {
                 "total": 201
             },
             "Python: two_sorted_arrays_merge.py": {
-                "passed": 0,
+                "passed": 201,
                 "total": 201
             }
         },
@@ -1690,7 +1690,7 @@ problem_mapping = {
                 "total": 97
             },
             "Python: calendar_rendering.py": {
-                "passed": 0,
+                "passed": 97,
                 "total": 97
             }
         },
@@ -1718,7 +1718,7 @@ problem_mapping = {
                 "total": 191
             },
             "Python: intervals_union.py": {
-                "passed": 0,
+                "passed": 191,
                 "total": 191
             }
         },
@@ -1760,7 +1760,7 @@ problem_mapping = {
                 "total": 209
             },
             "Python: sort_list.py": {
-                "passed": 0,
+                "passed": 209,
                 "total": 209
             }
         },

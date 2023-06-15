@@ -3,10 +3,24 @@ from typing import List
 from test_framework import generic_test
 
 
-def merge_two_sorted_arrays(A: List[int], m: int, B: List[int],
+def merge_two_sorted_arrays(a: List[int], m: int, b: List[int],
                             n: int) -> None:
-    # TODO - you fill in here.
-    return
+    i, j = m - 1, n - 1
+    while i >= 0 and j >= 0:
+        if a[i] > b[j]:
+            a[i + j + 1] = a[i]
+            i -= 1
+        else:
+            a[i + j + 1] = b[j]
+            j -= 1
+
+    while i >= 0:
+        a[i + j + 1] = a[i]
+        i -= 1
+
+    while j >= 0:
+        a[i + j + 1] = b[j]
+        j -= 1
 
 
 def merge_two_sorted_arrays_wrapper(A, m, B, n):
